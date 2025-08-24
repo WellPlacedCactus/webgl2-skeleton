@@ -99,8 +99,6 @@ const loop = now => {
   last = now;
   // console.log(1 / dt);
 
-  glMatrix.mat4.identity(proj);
-  glMatrix.mat4.identity(view);
   glMatrix.mat4.perspective(proj, 69 * Math.PI / 180, canvas.width / canvas.height, 0.01, 1000.0);
   glMatrix.mat4.lookAt(view, [0, 0, 2], [0, 0, 0], [0, 1, 0]);
   glMatrix.mat4.mul(projView, proj, view);
